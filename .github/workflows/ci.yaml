@@ -26,9 +26,9 @@ concurrency:
 
 # ---- Environment variables --------------------------------------------------
 env:
-  AWS_REGION: ap-south-1
-  # ECR registry host: <ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com
-  ECR_REGISTRY: ${{ vars.ECR_REGISTRY }}
+  AWS_REGION: us-east-1
+  # Hardcoded AWS ECR registry host (replace with your account ID/region if different)
+  ECR_REGISTRY: 295493126166.dkr.ecr.ap-south-1.amazonaws.com
 
 jobs:
   # ===========================================================================
@@ -190,4 +190,3 @@ jobs:
           git add helm/cloudkitchen/values.yaml
           git commit -m "ci(gitops): bump image tags to ${NEW_TAG} [skip ci]"
           git push origin main
-

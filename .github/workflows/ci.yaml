@@ -26,7 +26,7 @@ concurrency:
 
 # ---- Environment variables --------------------------------------------------
 env:
-  AWS_REGION: us-east-1
+  AWS_REGION: ap-south-1
   # ECR registry host: <ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com
   ECR_REGISTRY: ${{ vars.ECR_REGISTRY }}
 

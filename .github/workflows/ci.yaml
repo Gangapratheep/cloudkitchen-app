@@ -26,7 +26,7 @@ concurrency:
 
 # ---- Environment variables --------------------------------------------------
 env:
-  AWS_REGION: us-east-1
+  AWS_REGION: ap-south-1
   # Hardcoded AWS ECR registry host (replace with your account ID/region if different)
   ECR_REGISTRY: 295493126166.dkr.ecr.ap-south-1.amazonaws.com
 

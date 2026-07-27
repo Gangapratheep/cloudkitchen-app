@@ -85,8 +85,8 @@ jobs:
       - name: Build image (local, for scanning)
         uses: docker/build-push-action@v6
         with:
-          context: ./${{ matrix.service }}
-          file: ./${{ matrix.service }}/Dockerfile
+          context: ./services/${{ matrix.service }}
+          file: ./services/${{ matrix.service }}/Dockerfile
           push: false
           load: true
           tags: |
@@ -112,8 +112,8 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: docker/build-push-action@v6
         with:
-          context: ./${{ matrix.service }}
-          file: ./${{ matrix.service }}/Dockerfile
+          context: ./services/${{ matrix.service }}
+          file: ./services/${{ matrix.service }}/Dockerfile
           push: true
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ matrix.service }}:${{ steps.vars.outputs.sha }}

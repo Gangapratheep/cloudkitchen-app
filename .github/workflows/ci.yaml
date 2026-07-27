@@ -190,3 +190,4 @@ jobs:
           git add helm/cloudkitchen/values.yaml
           git commit -m "ci(gitops): bump image tags to ${NEW_TAG} [skip ci]"
           git push origin main
+

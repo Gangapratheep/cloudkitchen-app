@@ -77,7 +77,7 @@ spec:
       priority: 1
       services:
         - name: {{ .Values.frontend.servicename }}
-          port: 80
+          port: {{ .Values.frontend.port }}
   {{- if .Values.ingress.tls }}
   tls:
     secretName: {{ .Values.ingress.tlsSecretName }}
